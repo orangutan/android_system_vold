@@ -99,7 +99,7 @@ extern "C" {
 
 // change some fields to strengthen the encryption
 // #define RSA_KEY_SIZE 2048
-#define RSA_KEY_SIZE 4096
+#define RSA_KEY_SIZE 3072
 // #define RSA_KEY_SIZE_BYTES (RSA_KEY_SIZE / 8)
 #define RSA_KEY_SIZE_BYTES (RSA_KEY_SIZE / 16)
 #define RSA_EXPONENT 0x10001
