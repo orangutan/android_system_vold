@@ -38,15 +38,20 @@
 #define CRYPT_PERSIST_DATA_SIZE 0x1000
 
 // change some fields to strengthen the encryption
-// #define MAX_CRYPTO_TYPE_NAME_LEN 64
-#define MAX_CRYPTO_TYPE_NAME_LEN 128
+#define STRONGER_ENCRYPTION 1
+//#undef STRONGER_ENCRYPTION
 
-// #define MAX_KEY_LEN 48
+#ifdef STRONGER_ENCRYPTION
+#define MAX_CRYPTO_TYPE_NAME_LEN 128
 #define MAX_KEY_LEN 96
-// #define SALT_LEN 16
 #define SALT_LEN 32
-// #define SCRYPT_LEN 32
 #define SCRYPT_LEN 64
+#else
+#define MAX_CRYPTO_TYPE_NAME_LEN 64
+#define MAX_KEY_LEN 48
+#define SALT_LEN 16
+#define SCRYPT_LEN 32
+#endif
 
 /* definitions of flags in the structure below */
 #define CRYPT_MNT_KEY_UNENCRYPTED 0x1 /* The key for the partition is not encrypted. */
