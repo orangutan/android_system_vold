@@ -38,8 +38,8 @@
 #define CRYPT_PERSIST_DATA_SIZE 0x1000
 
 // change some fields to strengthen the encryption
-#define STRONGER_ENCRYPTION 1
-//#undef STRONGER_ENCRYPTION
+// #define STRONGER_ENCRYPTION 1
+#undef STRONGER_ENCRYPTION
 
 #ifdef STRONGER_ENCRYPTION
 #define MAX_CRYPTO_TYPE_NAME_LEN 128
